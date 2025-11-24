@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: white;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      position: sticky;
+      top: 0;
+    }
+    header h1 { margin: 0; font-weight: 600; }
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+    header nav a:hover { color: white; }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 60px;
+    }
+    .hero h2 {
+      font-size: 48px;
+      margin: 0;
+    }
+    .hero p {
+      width: 400px;
+      margin: 20px 0;
+      color: #bbb;
+    }
+    .hero button {
+      padding: 12px 28px;
+      font-size: 16px;
+      background: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 80px 60px;
+    }
+    .section h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h4 { margin-top: 0; }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #111;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mohamed</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Frontend Developer</h2>
+    <p>I build clean and modern websites using HTML, CSS, and JavaScript. Currently improving my skills and working on real‑world projects.</p>
+    <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">View Projects</button>
+  </section>
+
+  <section id="about" class="section">
+    <h3>About Me</h3>
+    <p>
+      I am a JavaScript‑focused beginner developer who enjoys building small apps
+      like task managers, counters, and link savers. I am now learning deeper JavaScript, UI design, and real‑world project workflow.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Task App</h4>
+        <p>A simple to‑do/task manager built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h4>Counter App</h4>
+        <p>A minimal counter that increases, decreases, and resets.</p>
+      </div>
+      <div class="card">
+        <h4>Save Link App</h4>
+        <p>Stores website links locally in the browser using LocalStorage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h3>Contact</h3>
+    <p>Email: youremail@example.com</p>
+  </section>
+
+  <footer>
+    © 2025 Mohamed — Portfolio
+  </footer>
+</body>
+</html>
